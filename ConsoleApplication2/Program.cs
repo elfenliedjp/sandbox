@@ -23,6 +23,13 @@ namespace ConsoleApplication2
             sand.kind = "すごい";
             sand.g = 10000;
             sand.playSand();
+
+            UltimateSand uSand = new UltimateSand();
+            uSand.kind = "ヤバい";
+            uSand.g = 10;
+            uSand.mass = 10000;
+            uSand.playSand();
+
             a.output();
 
         }
@@ -33,6 +40,18 @@ namespace ConsoleApplication2
         }
     }
 
+    class UltimateSand : Sand
+    {
+        // 砂の質量
+        public int mass = 0;
+
+        internal void playSand()
+        {
+            Console.WriteLine("{0}の砂を{1}グラム使って遊んだ！", kind, g);
+            Console.WriteLine("さらに質量を{0}に変えた！", mass);
+        }
+    }
+
     class Sand
     {
         /**
@@ -40,7 +59,7 @@ namespace ConsoleApplication2
          */
 
         // 砂の種類
-        String kind = "ふつう";
+        public String kind = "ふつう";
         // グラム
         public int g = 0;
 
