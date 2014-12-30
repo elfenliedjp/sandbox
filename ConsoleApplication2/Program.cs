@@ -24,6 +24,8 @@ namespace ConsoleApplication2
             sand.g = 10000;
             sand.playSand();
 
+            // コンソールコミットテスト用のコメント
+
             UltimateSand uSand = new UltimateSand(0);
             uSand.kind = "ヤバい";
             uSand.g = 10;
